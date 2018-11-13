@@ -10,10 +10,10 @@ import de.erichseifert.gral.plots.lines.LineRenderer;
 import de.erichseifert.gral.ui.InteractivePanel;
 
 public class LinePlotTest extends JFrame {
+    
     public LinePlotTest() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(900, 400);
-
+        setSize(1000, 1000);
         DataTable data = new DataTable(Double.class, Double.class);
         Polynom p1 = new Polynom();
         p1.add(new Monom(17,4));
@@ -30,8 +30,8 @@ public class LinePlotTest extends JFrame {
         getContentPane().add(new InteractivePanel(plot));
         LineRenderer lines = new DefaultLineRenderer2D();
         plot.setLineRenderers(data, lines);
-       // Color color = new Color(0.0f, 0.3f, 1.0f);
     }
+    
     public static void main(String[] args) {
         LinePlotTest frame = new LinePlotTest();
         frame.setVisible(true);
